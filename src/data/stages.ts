@@ -24,7 +24,6 @@ import fleet5040 from '../assets/img/fleet-5040.webp';
 // daytime pre-show version used on this stage's own detail page hero).
 import fleet4240 from '../assets/img/gal-4240night.webp';
 import fleet3224 from '../assets/img/fleet-3224.webp';
-import fleet4232 from '../assets/img/fleet-4232.webp';
 import fleet2424 from '../assets/img/stage-2424-b.webp';
 import fleet2420 from '../assets/img/fleet-2420.webp';
 // fleet-2016.webp (Formula E Fan Village, daytime) and fleet-vip-3724.webp
@@ -101,22 +100,6 @@ export const STAGES: Stage[] = [
     trimHeight: '~16′',
     // Trailer weight not published — apex-3224.html spec table lists
     // "Rigging & load data: Spec sheet on request" (only trailer length, 34′, is given).
-  },
-  {
-    // Source: agl-reflections-website/index.html lines 343-356
-    slug: 'apex-4232',
-    model: '4232',
-    series: 'APEX · Next in line',
-    deck: 'Coming 2026', // stages/index.html compare table deckno cell, line 105
-    image: fleet4232,
-    imageAlt: 'Rendering of the upcoming APEX 4232 mobile stage',
-    specs: [
-      'The newest APEX — announced for the 2026 season',
-      'Reserve dates now for early bookings',
-    ],
-    chip: '2026 Season',
-    soon: true,
-    // No specs published yet for this stage.
   },
   {
     // Source: agl-reflections-website/stages/apex-2424.html lines 84-116;

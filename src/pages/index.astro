@@ -48,7 +48,7 @@ import igFloydfest01 from '../assets/img/work-cs/floydfest-01.jpg';
 import igHialeah11 from '../assets/img/work-cs/hialeah-11.jpg';
 import igBigorange01 from '../assets/img/work-cs/bigorange-01.jpg';
 
-const fleetStages = STAGES.slice(0, 4); // 5040 (featured), 4240 (co-featured), 3224, 4232 (soon)
+const fleetStages = STAGES.slice(0, 4); // 5040 (featured), 4240 (co-featured), 3224, 2424 (4232 removed — client request, see stages.ts)
 const [hialeahCase, bigOrangeCase] = WORK;
 
 const igTiles = [
@@ -74,7 +74,7 @@ const igTiles = [
     posterSrc="/assets/video/hialeah-poster.jpg"
     eyebrow="The Stage Behind South Florida’s Biggest Nights · Est. 1975"
     lines={['Fifty Years', 'On Stage']}
-    subtitle="Eight APEX hydraulic mobile stages, JBL concert audio, lighting, video and crew — <b>one call, and the show is handled.</b>"
+    subtitle="Over 16 APEX hydraulic mobile stages, JBL concert audio, lighting, video and crew — <b>one call, and the show is handled.</b>"
     ctaPrimary={{ label: 'Get a Quote', href: '/quote.html' }}
     ctaSecondary={{ label: 'See the Fleet', href: '#fleet' }}
   />
@@ -90,7 +90,7 @@ const igTiles = [
 
   <TrustBand
     lead="Trusted on South Florida’s biggest nights"
-    names="City of Hialeah • Big Orange NYE Miami • FloydFest • Formula E Fan Village • Network Broadcast Sets"
+    names="City of Hialeah • Big Orange NYE Miami • FloydFest • Formula E Fan Village • Network Broadcast Sets • III Points • Memphis in May • Moonrise Festival"
   />
 
   <DateCheckForm />
@@ -111,7 +111,7 @@ const igTiles = [
         cards={[
           {
             title: 'I need a stage',
-            body: 'Eight APEX hydraulic stages from a 20-foot community deck to the 50×40 flagship. Compare decks, specs and photos.',
+            body: 'Over 16 APEX hydraulic stages from a 20-foot community deck to the 50×40 GEN3 flagship. Compare decks, specs and photos.',
             href: '/stages/index.html',
             cta: 'Browse the fleet',
           },
@@ -139,7 +139,7 @@ const igTiles = [
           <Kicker text="Stage Fleet" />
           <h2>The APEX<br /><span class="ghost">Fleet</span></h2>
         </div>
-        <p class="right">Hydraulic mobile stages that roll in on a trailer and stand up show-ready in hours — from a 20-foot community deck to the 50-by-40 flagship.</p>
+        <p class="right">Hydraulic mobile stages that roll in on a trailer and stand up show-ready in hours — from a 20-foot community deck to the 50-by-40 GEN3 flagship.</p>
       </div>
       <div class="fleet-grid">
         {fleetStages.map((stage) => <FleetCard stage={stage} />)}
@@ -275,7 +275,7 @@ const igTiles = [
         </div>
         <div class="about-right">
           <p>Reflections Productions started in <b>1975</b> as a South Florida production shop with a simple idea: if the show matters, everything behind it should come from people who’ve done it before. Fifty years later, that idea has grown into a <b>family of brands</b> — Reflections Productions, Mobile Stages Miami and the APEX stage line.</p>
-          <p>Today the company runs <b>eight APEX hydraulic mobile stages</b> from its Princeton, Florida yard, backed by concert audio, lighting, video and a crew that has built shows for cities, festivals, broadcasters and touring acts across the region.</p>
+          <p>Today the company runs <b>over 16 APEX hydraulic mobile stages</b> from its Princeton, Florida yard, backed by concert audio, lighting, video and a crew that has built shows for cities, festivals, broadcasters and touring acts across the region.</p>
           <p>Three generations of South Florida audiences have watched their favorite nights happen on our decks. <b>We plan on a fourth.</b></p>
           <div class="brand-row">
             <div class="brand-cell"><BarMeter variant="dark" /><span class="nm">Reflections Productions</span><span class="rl">Full-service production</span></div>
