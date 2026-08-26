@@ -6,15 +6,11 @@
   src: url('/assets/fonts/archivo-var-latin.woff2') format('woff2');
 }
 @font-face {
-  /* Declared as weight 400 (its actual design weight is black/900) so the
-     existing `font-weight: 400` rules below and across every component
-     keep matching this face without every call site needing an update --
-     same convention the old Archivo Black @font-face used. */
-  font-family: 'Big Shoulders Display';
+  font-family: 'Archivo Black';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('/assets/fonts/big-shoulders-display-black-latin.woff2') format('woff2');
+  src: url('/assets/fonts/archivo-black-latin.woff2') format('woff2');
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
