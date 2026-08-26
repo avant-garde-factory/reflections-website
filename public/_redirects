@@ -1,6 +1,8 @@
 # Retired pages -> permanent redirects.
-# /rates.html was live and indexed; the client asked for all published rates
-# to come off the site. A 301 keeps old links, bookmarks and search results
-# working and passes the page's ranking to the quote page instead of 404ing.
-/rates.html    /quote.html    301
-/rates         /quote.html    301
+# Both pages were live and indexed before the client asked for them to come
+# off the site. A 301 keeps old links, bookmarks and search results working
+# and passes each page's ranking to its nearest replacement instead of 404ing.
+/rates.html                /quote.html     301
+/rates                     /quote.html     301
+/stages/apex-4232.html     /stages/        301
+/stages/apex-4232          /stages/        301
