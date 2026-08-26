@@ -1,0 +1,6 @@
+# Retired pages -> permanent redirects.
+# /rates.html was live and indexed; the client asked for all published rates
+# to come off the site. A 301 keeps old links, bookmarks and search results
+# working and passes the page's ranking to the quote page instead of 404ing.
+/rates.html    /quote.html    301
+/rates         /quote.html    301

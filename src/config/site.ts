@@ -10,7 +10,6 @@ export const SITE = {
   nav: [
     { label: 'Stage Fleet', href: '/stages/index.html' },
     { label: 'Production', href: '/production/index.html' },
-    { label: 'Rates', href: '/rates.html' },
     { label: 'Our Work', href: '/work/index.html' },
     { label: 'About', href: '/about.html' },
   ],

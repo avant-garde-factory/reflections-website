@@ -4,10 +4,10 @@
 // in the exact section order of the source: hero -> stats -> trust band ->
 // date-check -> path cards -> fleet grid (4 cards) -> video reel ->
 // services teaser -> work (2 teasers) -> testimonials -> how-it-works ->
-// about teaser -> rates teaser -> Instagram grid -> quote CTA -> footer.
+// about teaser -> Instagram grid -> quote CTA -> footer.
 //
-// The video reel, compact services teaser, about teaser and rates teaser
-// sections were never built as standalone components (Task 9's note: the
+// The video reel, compact services teaser and about teaser sections
+// were never built as standalone components (Task 9's note: the
 // homepage services layout is visually distinct from ServiceBlock, which
 // belongs to the full production-services page, Task 16) -- they're written
 // directly here, reusing Kicker/Button/BarMeter and the project's CSS custom
@@ -144,7 +144,7 @@ const igTiles = [
       <div class="fleet-grid">
         {fleetStages.map((stage) => <FleetCard stage={stage} />)}
       </div>
-      <p class="fleet-all"><a class="arrow-link" href="/stages/index.html">Compare all 8 stages — decks, heights & tow specs</a></p>
+      <p class="fleet-all"><a class="arrow-link" href="/stages/index.html">Compare the full fleet — decks, heights & tow specs</a></p>
     </div>
   </section>
 
@@ -284,19 +284,6 @@ const igTiles = [
           </div>
           <p style="margin-top: 30px; margin-bottom: 0"><a class="arrow-link" style="color: var(--rig-teal)" href="/about.html">Read the full story</a></p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="band tight" id="rates-tease" aria-label="Published rates">
-    <div class="wrap">
-      <div class="rates-tease rv">
-        <div>
-          <Kicker text="No Mystery Pricing" />
-          <h2 style="margin: 0 0 10px">We publish<br />our <span style="color: var(--gel-coral)">rates</span>.</h2>
-          <p style="max-width: 52ch">Crew calls, generators, barricades, DJ systems, movie nights — the numbers are on the site, not behind a phone call. Stages are quoted per event.</p>
-        </div>
-        <Button href="/rates.html" variant="coral">See the Rates</Button>
       </div>
     </div>
   </section>
@@ -623,20 +610,4 @@ const igTiles = [
     margin-bottom: 18px;
   }
 
-  /* Rates teaser (source: index.html embedded <style> lines 71, 78) */
-  .rates-tease {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 34px;
-    border: 1px solid rgba(255, 107, 74, 0.35);
-    padding: 44px 46px;
-    flex-wrap: wrap;
-    background: rgba(255, 107, 74, 0.05);
-  }
-  @media (max-width: 900px) {
-    .rates-tease {
-      padding: 34px 26px;
-    }
-  }
 </style>

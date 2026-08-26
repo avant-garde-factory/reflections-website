@@ -4,14 +4,14 @@
 // order of agl-reflections-website/production/index.html (385 lines):
 //   hero (w/ anchor-row jump-nav) -> seven svc-blocks (audio/lighting/video/
 //   crowd-control/backline/crew/graphics, alternating flip) -> Deep Bench
-//   cross-sell grid (id=more) -> rates (id=rates) -> quote CTA -> footer.
+//   cross-sell grid (id=more) -> quote CTA -> footer.
 //
 // Task 16 fix: the original brief only accounted for the six services shown
 // in the homepage's teaser and missed the page's 7th svc-block
 // (id="graphics") and the "Deep Bench" cross-sell grid (id="more"). Both
 // are now transcribed from source lines 145-193, and the anchor-row is
-// restored to all 9 source links (line 91): Audio / Lighting / LED Video /
-// Crowd Control / Backline / Crew / Graphics / More / Rates -- matching
+// restored to the source links (line 91): Audio / Lighting / LED Video /
+// Crowd Control / Backline / Crew / Graphics / More -- matching
 // main.css lines 339-341 (`.anchor-row`, ported below).
 //
 // The Deep Bench grid reuses the `.svc-grid`/`.svc` card pattern from the
@@ -34,14 +34,6 @@
 //      service's two source sentences-groups are joined here with a single
 //      space into one flowing paragraph instead -- no sentences dropped,
 //      just no hard paragraph break.
-//
-// Rates section markup/CSS ported from source lines 195-290 plus
-// assets/css/main.css lines 303-310 (`table.spec`/`.spec-panel`/
-// `.spec-note`) and 606-609 (`.rates-grid`/`.rates-foot`), hex colors
-// swapped for the Task 2 CSS custom properties (--panel->--deck,
-// --hair->--hairline, --sand-faint->--paper-faint, --sand-dim->--paper-dim,
-// --sand->--paper). `.band`/`.sec-head`/`.ghost`/`.arrow-link` come from
-// base.css (Task 14) and are NOT redefined here.
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/house/Header.astro';
 import Footer from '../../components/house/Footer.astro';
@@ -68,7 +60,6 @@ const anchors = [
   { href: '#crew', label: 'Crew' },
   { href: '#graphics', label: 'Graphics' },
   { href: '#more', label: 'More' },
-  { href: '#rates', label: 'Rates' },
 ];
 
 const deepBench = [
@@ -90,7 +81,7 @@ const deepBench = [
   },
   {
     title: 'Cross Rentals',
-    body: 'Production companies and venues: expand your inventory for a single show. Cross-rent stages, audio, lighting and video from our yard at trade rates.',
+    body: 'Production companies and venues: expand your inventory for a single show. Cross-rent stages, audio, lighting and video straight from our yard.',
   },
   {
     title: '&ldquo;MyPad&rdquo; Remote Studio',
@@ -262,108 +253,6 @@ const services = [
     </div>
   </section>
 
-  <section class="band" id="rates">
-    <div class="wrap">
-      <div class="sec-head">
-        <div class="left rv">
-          <Kicker text="Published Rates" />
-          <h2>Straight<br /><span class="ghost">Numbers</span></h2>
-        </div>
-        <p class="right">We publish our rates — the same ones on our current price sheets. Stage and full-production packages are quoted per event, because no two shows are the same.</p>
-      </div>
-
-      <div class="rates-grid">
-        <div class="spec-panel">
-          <div class="spec-cap"><h3>Event Production Labor · Per Hour</h3><BarMeter /></div>
-          <table class="spec">
-            <tbody>
-              <tr><th scope="row">Master Rigging Technician</th><td class="price">$75.00</td></tr>
-              <tr><th scope="row">Master Systems Engineer</th><td class="price">$75.00</td></tr>
-              <tr><th scope="row">Master Event Producer</th><td class="price">$75.00</td></tr>
-              <tr><th scope="row">Technical Director (TD)</th><td class="price">$75.00</td></tr>
-              <tr><th scope="row">A1 Master Sound Technician</th><td class="price">$65.00</td></tr>
-              <tr><th scope="row">LD1 Master Lighting Technician</th><td class="price">$65.00</td></tr>
-              <tr><th scope="row">AV1 Master AV Technician</th><td class="price">$65.00</td></tr>
-              <tr><th scope="row">Cam-1 Master Camera Operator</th><td class="price">$75.00</td></tr>
-              <tr><th scope="row">V1 Master Video Projectionist</th><td class="price">$75.00</td></tr>
-              <tr><th scope="row">Cam-2 Camera Operator</th><td class="price">$55.00</td></tr>
-              <tr><th scope="row">A2 Sound / LD2 Lighting / AV2 / V2</th><td class="price">$45.00</td></tr>
-              <tr><th scope="row">LD3 Follow Spot Operator</th><td class="price">$38.00</td></tr>
-              <tr><th scope="row">Stage Hands</th><td class="price">$38.00</td></tr>
-              <tr><th scope="row">Non-CDL Delivery Driver</th><td class="price">$40.00</td></tr>
-              <tr><th scope="row">CDL Delivery Driver</th><td class="price">$150.00</td></tr>
-              <tr><th scope="row">Trucking</th><td>T.B.D. by distance &amp; load</td></tr>
-            </tbody>
-          </table>
-          <p class="spec-note">Four-hour minimum per call. Calls over 8 hours run time-and-a-half with a paid break or hot meal on site. Clients provide water for all techs.</p>
-        </div>
-
-        <div>
-          <div class="spec-panel">
-            <div class="spec-cap"><h3>Power &amp; Site · Per Day</h3><BarMeter /></div>
-            <table class="spec">
-              <tbody>
-                <tr><th scope="row">MultiQuip 25 kW diesel generator (8-hr day)</th><td class="price">$350.00</td></tr>
-                <tr><th scope="row">MultiQuip 45 kW diesel generator (8-hr day)</th><td class="price">$525.00</td></tr>
-                <tr><th scope="row">MultiQuip 125 kW diesel generator (8-hr day)</th><td class="price">$745.00</td></tr>
-                <tr><th scope="row">&ldquo;MyPad&rdquo; secure control room</th><td class="price">$400.00</td></tr>
-                <tr><th scope="row">5&prime; &times; 10&prime; black master tent (add-on)</th><td class="price">+$100.00</td></tr>
-                <tr><th scope="row">French-style barricades (per section)</th><td class="price">$32.00</td></tr>
-                <tr><th scope="row">Custom photo ID badges (min. 25)</th><td class="price">$8.50 ea</td></tr>
-              </tbody>
-            </table>
-            <p class="spec-note">MOJO barricade, cable ramps, FOH trailers, motorhome and scaffolding at day rates — call for availability.</p>
-          </div>
-          <div class="spec-panel" style="margin-top:22px">
-            <div class="spec-cap"><h3>DJ &amp; Party Systems</h3><BarMeter /></div>
-            <table class="spec">
-              <tbody>
-                <tr><th scope="row">Party sound system w/ operator · 4 hrs</th><td class="price">from $400.00</td></tr>
-                <tr><th scope="row">Party sound system w/ M.C. · 4 hrs</th><td class="price">from $550.00</td></tr>
-                <tr><th scope="row">Karaoke system w/ operator · 4 hrs</th><td class="price">$500.00</td></tr>
-                <tr><th scope="row">Game show system w/ sound &amp; host · 2 hrs</th><td class="price">$400.00</td></tr>
-                <tr><th scope="row">Video VJ add-on · 4 hrs (incl. projection)</th><td class="price">$600.00</td></tr>
-                <tr><th scope="row">Single video projection w/ 10&prime; screen</th><td class="price">$500.00</td></tr>
-                <tr><th scope="row">Dual video projection screens</th><td class="price">$750.00</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="spec-panel">
-          <div class="spec-cap"><h3>Outdoor Movie Packages</h3><BarMeter /></div>
-          <table class="spec">
-            <tbody>
-              <tr><th scope="row">Movies in the Park / Block Party — 16&prime; &times; 24&prime; inflatable screen, 5,600+ lumen projector, JBL VRX array sound</th><td class="price">$1,395.00</td></tr>
-              <tr><th scope="row">Backyard package — 9&prime; &times; 12&prime; inflatable screen, projector, JBL EON sound</th><td class="price">$550.00</td></tr>
-              <tr><th scope="row">Executive presentation (indoor, single screen)</th><td class="price">$500.00</td></tr>
-              <tr><th scope="row">Campaign presentation (indoor, dual screens)</th><td class="price">$750.00</td></tr>
-              <tr><th scope="row">Surround sound add-on</th><td class="price">+$250.00</td></tr>
-              <tr><th scope="row">SubSonic sound add-on</th><td class="price">+$160.00</td></tr>
-              <tr><th scope="row">Honda EM5000 quiet generator add-on</th><td class="price">+$295.00</td></tr>
-              <tr><th scope="row">Popcorn machine w/ supplies</th><td class="price">$145.00</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="spec-panel">
-          <div class="spec-cap"><h3>Stages &amp; Full Productions</h3><BarMeter /></div>
-          <table class="spec">
-            <tbody>
-              <tr><th scope="row">APEX 2016 mobile stage</th><td class="price">from $1,995</td></tr>
-              <tr><th scope="row">APEX 2420 &ndash; 5040 · VIP Deck 3724</th><td>Quoted per event</td></tr>
-              <tr><th scope="row">Concert audio, lighting &amp; LED video rigs</th><td>Quoted per event</td></tr>
-              <tr><th scope="row">Full festival &amp; broadcast production</th><td>Quoted per event</td></tr>
-            </tbody>
-          </table>
-          <p class="spec-note">Stage pricing moves with dates, distance and configuration — tell us the show and we'll price the whole rig in one quote. <a class="arrow-link" href="/quote.html" style="margin-top:8px">Get a quote</a></p>
-        </div>
-      </div>
-
-      <p class="rates-foot"><b>Rates as published by Reflections Productions.</b> Availability is first-come — July and December book out fastest. Every line above can ride on the same truck as your stage.</p>
-    </div>
-  </section>
-
   <QuoteCta compact />
 
   <Footer />
@@ -400,76 +289,7 @@ const services = [
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .rates-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 22px;
-    align-items: start;
-  }
-  .spec-panel {
-    background: var(--deck);
-    border: 1px solid var(--hairline);
-  }
-  .spec-panel .spec-cap {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 14px;
-    padding: 18px 16px;
-    border-bottom: 1px solid rgba(63, 167, 150, 0.3);
-    background: var(--deck-2);
-  }
-  .spec-panel .spec-cap h3 {
-    font-size: 15px;
-    letter-spacing: 0.06em;
-  }
-  .spec-note {
-    font-size: 13px;
-    color: var(--paper-faint);
-    padding: 14px 16px;
-  }
-  :global(table.spec) {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  :global(table.spec th),
-  :global(table.spec td) {
-    padding: 13px 16px;
-    font-size: 14.5px;
-    text-align: left;
-    border-bottom: 1px solid rgba(63, 167, 150, 0.12);
-    vertical-align: top;
-  }
-  :global(table.spec th) {
-    width: 46%;
-    font-weight: 600;
-    color: var(--paper-faint);
-    font-size: 12.5px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-  }
-  :global(table.spec td) {
-    color: var(--paper);
-  }
-  :global(.rates-grid table.spec .price) {
-    font-family: var(--font-display);
-    color: var(--paper);
-    white-space: nowrap;
-  }
-  .rates-foot {
-    margin-top: 22px;
-    font-size: 13px;
-    color: var(--paper-faint);
-    max-width: 76ch;
-  }
-  .rates-foot :global(b) {
-    color: var(--paper-dim);
-  }
-
   @media (max-width: 900px) {
-    .rates-grid {
-      grid-template-columns: 1fr;
-    }
     .svc-grid[data-cols='3'] {
       grid-template-columns: 1fr;
     }
