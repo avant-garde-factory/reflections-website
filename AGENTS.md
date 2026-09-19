@@ -39,6 +39,8 @@ token-saving, etc.) belong in your own `~/.claude/CLAUDE.md`, never here.
 
 Avant Garde Factory is the umbrella. The units refer work to each other and
 their scopes can overlap, but none is a sub-brand or "counterpart" of another.
+Rico (Jonathan Arroyo) owns it; Michael Lopez is a contractor with admin
+access to most systems.
 
 - **Launchpad** — creative agency. Its job is **creating and managing company
   websites** (plus web, social, photo, video, print). Launchpad builds the
@@ -46,6 +48,12 @@ their scopes can overlap, but none is a sub-brand or "counterpart" of another.
 - **Productions (AGP)** — event production & rental: staging, lighting, sound,
   rigging, event build-out, rentals.
 - **Media (AGM)** — photo & video production. Already live and earning.
+- **Aerials** — aerial and drone work.
+- **Designs** — design services.
+- **Vacation Rentals** — short-term rental ("Arroyo Miami House").
+
+More units will come. Rico's `agf-context` repo (`business.md`) is the
+day-to-day list of entities and clients; this file is the short version.
 
 ## Check `standards` before researching
 
