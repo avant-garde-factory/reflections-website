@@ -83,6 +83,33 @@ Every new Avant Garde site starts from **`launchpad-site-template`** (the tokens
 Stack: **Astro** static output → **Cloudflare Pages**, git-connected (push to
 `main` rebuilds the site).
 
+## Sign-ups: Michael sets up, Rico gets owner rights the same day
+
+Never let a free or cheap tool become a Rico-gated blocker. Michael creates
+the account under an `@avantgardefactory.com` address, adds Rico as
+owner/co-owner/admin the same day, and logs it in the account registry
+(`agf-context/accounts.md`). Only things that must be in Rico's own name
+(billing card, domain ownership, Meta Business)
+wait for Rico — and those get a ClickUp task, not an attempt. Prefer what the
+Workspace already includes (e.g. Google Calendar booking pages instead of
+Calendly) before adding another vendor.
+
+## ClickUp priority: what each level means
+
+A priority only means something if it is rare. Pick the lowest level that is
+true. This section is the source; the ClickUp doc "Priority rules" (Factory
+space) is a copy — change it here first, then update the doc.
+
+- **Urgent** — something is broken, or we lose money, a domain, or access if
+  it isn't done within 48 hours. Keep it to 1–2 open at a time.
+- **High** — it holds up the current main project, or it has a hard deadline
+  within 2 weeks.
+- **Normal** — it needs doing, but nothing is waiting on it.
+- **Low** — optional, or on hold.
+
+If everything is High, nothing is. When a task is done waiting or the main
+project changes, re-check its level.
+
 ## Never commit
 
 Secrets, API keys, tokens, `.env` files — use the host's environment variables.
